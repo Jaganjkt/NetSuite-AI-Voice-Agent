@@ -191,7 +191,7 @@ define(['N/llm', 'N/log'], function (llm, log) {
         try {
             llmResult = resolveWithLLM(transcript);
         } catch (e) {
-            log.audit('AVA_IntentResolver', 'LLM fallback to rules: ' + e.message);
+            log.audit('NAVA_IntentResolver', 'LLM fallback to rules: ' + e.message);
         }
 
         var rulesResult = resolveWithRules(transcript);

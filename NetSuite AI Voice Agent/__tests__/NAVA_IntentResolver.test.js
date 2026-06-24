@@ -1,5 +1,5 @@
 /**
- * Unit tests for AVA_IntentResolver
+ * Unit tests for NAVA_IntentResolver
  */
 
 jest.mock('N/llm', () => ({
@@ -15,11 +15,11 @@ jest.mock('N/log', () => ({
 
 const llm = require('N/llm');
 
-describe('AVA_IntentResolver', () => {
+describe('NAVA_IntentResolver', () => {
     let intentResolver;
 
     beforeAll(() => {
-        intentResolver = require('../src/FileCabinet/SuiteScripts/ai_voice_agent/lib/AVA_IntentResolver');
+        intentResolver = require('../src/FileCabinet/SuiteScripts/ai_voice_agent/lib/NAVA_IntentResolver');
     });
 
     beforeEach(() => {

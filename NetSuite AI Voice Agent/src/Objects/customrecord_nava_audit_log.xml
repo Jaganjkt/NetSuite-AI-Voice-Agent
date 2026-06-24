@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<customrecordtype scriptid="customrecord_ava_audit_log">
-  <recordname>AVA Audit Log</recordname>
+<customrecordtype scriptid="customrecord_nava_audit_log">
+  <recordname>NAVA Audit Log</recordname>
   <includename>T</includename>
   <description>Stores all AI Voice Agent audit events.</description>
   <accesstype>NONENEEDED</accesstype>
@@ -11,7 +11,7 @@
   <enabledle>F</enabledle>
   <enablemailmerge>F</enablemailmerge>
   <enablenumbering>T</enablenumbering>
-  <numberingprefix>AVA-</numberingprefix>
+  <numberingprefix>NAVA-</numberingprefix>
   <isinactive>F</isinactive>
   <isordered>F</isordered>
   <showcreationdate>T</showcreationdate>
@@ -21,7 +21,7 @@
   <showowner>T</showowner>
   <showowneronlist>T</showowneronlist>
   <customrecordcustomfields>
-    <customrecordcustomfield scriptid="custrecord_ava_event_type">
+    <customrecordcustomfield scriptid="custrecord_nava_event_type">
       <label>Event Type</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>T</ismandatory>
@@ -29,7 +29,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_user_id">
+    <customrecordcustomfield scriptid="custrecord_nava_user_id">
       <label>User ID</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>T</ismandatory>
@@ -37,7 +37,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_user_name">
+    <customrecordcustomfield scriptid="custrecord_nava_user_name">
       <label>User Name</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>F</ismandatory>
@@ -45,7 +45,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_role_id">
+    <customrecordcustomfield scriptid="custrecord_nava_role_id">
       <label>Role ID</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>F</ismandatory>
@@ -53,7 +53,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_timestamp">
+    <customrecordcustomfield scriptid="custrecord_nava_timestamp">
       <label>Timestamp</label>
       <fieldtype>DATETIMETZ</fieldtype>
       <ismandatory>F</ismandatory>
@@ -61,35 +61,35 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_transcript">
+    <customrecordcustomfield scriptid="custrecord_nava_transcript">
       <label>Transcript</label>
       <fieldtype>TEXTAREA</fieldtype>
       <ismandatory>F</ismandatory>
       <displaytype>NORMAL</displaytype>
       <storevalue>T</storevalue>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_intent_json">
+    <customrecordcustomfield scriptid="custrecord_nava_intent_json">
       <label>Intent JSON</label>
       <fieldtype>TEXTAREA</fieldtype>
       <ismandatory>F</ismandatory>
       <displaytype>NORMAL</displaytype>
       <storevalue>T</storevalue>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_action_result">
+    <customrecordcustomfield scriptid="custrecord_nava_action_result">
       <label>Action Result</label>
       <fieldtype>TEXTAREA</fieldtype>
       <ismandatory>F</ismandatory>
       <displaytype>NORMAL</displaytype>
       <storevalue>T</storevalue>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_error_msg">
+    <customrecordcustomfield scriptid="custrecord_nava_error_msg">
       <label>Error Message</label>
       <fieldtype>TEXTAREA</fieldtype>
       <ismandatory>F</ismandatory>
       <displaytype>NORMAL</displaytype>
       <storevalue>T</storevalue>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_governance">
+    <customrecordcustomfield scriptid="custrecord_nava_governance">
       <label>Governance Used</label>
       <fieldtype>INTEGER</fieldtype>
       <ismandatory>F</ismandatory>
@@ -97,7 +97,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_source_lang">
+    <customrecordcustomfield scriptid="custrecord_nava_source_lang">
       <label>Source Language</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>F</ismandatory>
@@ -105,7 +105,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_confidence">
+    <customrecordcustomfield scriptid="custrecord_nava_confidence">
       <label>Confidence</label>
       <fieldtype>PERCENT</fieldtype>
       <ismandatory>F</ismandatory>
@@ -113,7 +113,7 @@
       <storevalue>T</storevalue>
       <showinlist>T</showinlist>
     </customrecordcustomfield>
-    <customrecordcustomfield scriptid="custrecord_ava_session_id">
+    <customrecordcustomfield scriptid="custrecord_nava_session_id">
       <label>Session ID</label>
       <fieldtype>TEXT</fieldtype>
       <ismandatory>F</ismandatory>

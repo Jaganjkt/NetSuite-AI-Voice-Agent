@@ -5,7 +5,7 @@
  */
 define(['N/record', 'N/runtime', 'N/format'], function (record, runtime, format) {
 
-    var CUSTOM_RECORD_TYPE = 'customrecord_ava_audit_log';
+    var CUSTOM_RECORD_TYPE = 'customrecord_nava_audit_log';
 
     var EVENT_TYPES = {
         VOICE_INPUT: 'voice_input',
@@ -26,35 +26,35 @@ define(['N/record', 'N/runtime', 'N/format'], function (record, runtime, format)
 
         var logRecord = record.create({ type: CUSTOM_RECORD_TYPE });
 
-        logRecord.setValue({ fieldId: 'custrecord_ava_event_type', value: options.eventType });
-        logRecord.setValue({ fieldId: 'custrecord_ava_user_id', value: String(user.id) });
-        logRecord.setValue({ fieldId: 'custrecord_ava_user_name', value: user.name });
-        logRecord.setValue({ fieldId: 'custrecord_ava_role_id', value: String(user.role) });
-        logRecord.setValue({ fieldId: 'custrecord_ava_timestamp', value: new Date() });
+        logRecord.setValue({ fieldId: 'custrecord_nava_event_type', value: options.eventType });
+        logRecord.setValue({ fieldId: 'custrecord_nava_user_id', value: String(user.id) });
+        logRecord.setValue({ fieldId: 'custrecord_nava_user_name', value: user.name });
+        logRecord.setValue({ fieldId: 'custrecord_nava_role_id', value: String(user.role) });
+        logRecord.setValue({ fieldId: 'custrecord_nava_timestamp', value: new Date() });
 
         if (options.transcript) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_transcript', value: options.transcript.substring(0, 4000) });
+            logRecord.setValue({ fieldId: 'custrecord_nava_transcript', value: options.transcript.substring(0, 4000) });
         }
         if (options.intentJson) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_intent_json', value: JSON.stringify(options.intentJson).substring(0, 4000) });
+            logRecord.setValue({ fieldId: 'custrecord_nava_intent_json', value: JSON.stringify(options.intentJson).substring(0, 4000) });
         }
         if (options.actionResult) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_action_result', value: JSON.stringify(options.actionResult).substring(0, 4000) });
+            logRecord.setValue({ fieldId: 'custrecord_nava_action_result', value: JSON.stringify(options.actionResult).substring(0, 4000) });
         }
         if (options.errorMessage) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_error_msg', value: options.errorMessage.substring(0, 4000) });
+            logRecord.setValue({ fieldId: 'custrecord_nava_error_msg', value: options.errorMessage.substring(0, 4000) });
         }
         if (options.governanceUsed) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_governance', value: options.governanceUsed });
+            logRecord.setValue({ fieldId: 'custrecord_nava_governance', value: options.governanceUsed });
         }
         if (options.sourceLanguage) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_source_lang', value: options.sourceLanguage });
+            logRecord.setValue({ fieldId: 'custrecord_nava_source_lang', value: options.sourceLanguage });
         }
         if (options.confidence) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_confidence', value: options.confidence });
+            logRecord.setValue({ fieldId: 'custrecord_nava_confidence', value: options.confidence });
         }
         if (options.sessionId) {
-            logRecord.setValue({ fieldId: 'custrecord_ava_session_id', value: options.sessionId });
+            logRecord.setValue({ fieldId: 'custrecord_nava_session_id', value: options.sessionId });
         }
 
         return logRecord.save();

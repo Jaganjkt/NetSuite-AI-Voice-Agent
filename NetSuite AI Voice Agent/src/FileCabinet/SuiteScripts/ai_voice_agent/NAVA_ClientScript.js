@@ -7,17 +7,17 @@
 define(['N/currentRecord', 'N/log'], function (currentRecord, log) {
 
     function pageInit(context) {
-        log.debug('AVA_ClientScript', 'Voice Agent UI initialized');
+        log.debug('NAVA_ClientScript', 'Voice Agent UI initialized');
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
-                var typing = document.getElementById('ava-typing');
+                var typing = document.getElementById('nava-typing');
                 if (typing) typing.remove();
             }
 
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
-                var micBtn = document.getElementById('ava-mic-btn');
+                var micBtn = document.getElementById('nava-mic-btn');
                 if (micBtn) micBtn.click();
             }
         });

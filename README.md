@@ -1,4 +1,4 @@
-# NetSuite AI Voice Agent (AVA)
+# NetSuite AI Voice Agent (NAVA)
 
 A voice-powered AI assistant that runs **natively inside Oracle NetSuite**. Speak or type natural-language commands — in 30+ languages — to search, view, create, edit, approve, and delete NetSuite records without touching a single form.
 
@@ -10,7 +10,7 @@ Built entirely with **SuiteScript 2.1** and NetSuite's new generative-AI modules
 
 https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20Voice%20Agent.mp4
 
-> *Click the link above or download the video to watch the full walkthrough of AVA in action inside NetSuite.*
+> *Click the link above or download the video to watch the full walkthrough of NAVA in action inside NetSuite.*
 
 ---
 
@@ -19,7 +19,7 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 ### Voice & Chat Interface
 - Browser-native **Speech Recognition** (Web Speech API) with real-time transcription
 - Text input fallback for environments without mic access
-- **Speech Synthesis** — AVA reads responses aloud
+- **Speech Synthesis** — NAVA reads responses aloud
 - Keyboard shortcuts: `Ctrl+M` to toggle mic, `Enter` to send, `Esc` to cancel
 - Responsive design that works on desktop and tablet inside the NetSuite chrome
 
@@ -35,7 +35,7 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 ### Multi-Language Translation
 - **32 languages** supported via `N/machineTranslation`
 - Automatic language detection with ASCII heuristic
-- Bidirectional translation — speak in your language, AVA processes in English, responds in kind
+- Bidirectional translation — speak in your language, NAVA processes in English, responds in kind
 - Languages include: English, Spanish, French, German, Portuguese, Japanese, Chinese, Korean, Arabic, Hindi, Tamil, Telugu, Estonian, Finnish, Swedish, Russian, Thai, Vietnamese, Turkish, and more
 
 ### Record Operations
@@ -62,7 +62,7 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 - **Two-phase confirmation** for all write operations (create, edit, delete, approve, void)
 - Confidence bar visualization (green/amber/red) before execution
 - Visual inline confirmation buttons in chat
-- Comprehensive **audit log** (custom record `customrecord_ava_audit_log`) tracking:
+- Comprehensive **audit log** (custom record `customrecord_nava_audit_log`) tracking:
   - Voice inputs, translations, intent resolutions
   - LLM calls with governance usage
   - Tool executions, user confirmations/rejections
@@ -86,7 +86,7 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 │  └──────┬───────┘  └──────┬───────┘  └───────────────────────┘  │
 │         └────────┬────────┘                                     │
 │                  ▼                                               │
-│         AVA_ClientScript.js                                     │
+│         NAVA_ClientScript.js                                     │
 │              AJAX POST                                          │
 └──────────────────┬──────────────────────────────────────────────┘
                    │
@@ -94,10 +94,10 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 ┌──────────────────────────────────────────────────────────────────┐
 │                    NetSuite Server-Side                           │
 │                                                                  │
-│  AVA_Suitelet.js  ◄──── GET: serves Voice UI (inline HTML)      │
+│  NAVA_Suitelet.js  ◄──── GET: serves Voice UI (inline HTML)      │
 │        │                POST: handles AJAX commands               │
 │        │                                                         │
-│  AVA_RESTlet.js   ◄──── External / mobile integrations           │
+│  NAVA_RESTlet.js   ◄──── External / mobile integrations           │
 │        │                                                         │
 │        ▼                                                         │
 │  ┌─────────────────────────────────────────────────────────┐     │
@@ -113,7 +113,7 @@ https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20V
 │  │         │                                               │     │
 │  │  4. ActionRouter       ─── N/record, N/search, N/url    │     │
 │  │         ▼                                               │     │
-│  │  5. AuditLog           ─── customrecord_ava_audit_log   │     │
+│  │  5. AuditLog           ─── customrecord_nava_audit_log   │     │
 │  └─────────────────────────────────────────────────────────┘     │
 └──────────────────────────────────────────────────────────────────┘
 ```
@@ -128,26 +128,26 @@ NetSuite-AI-Voice-Agent/
 │   ├── src/
 │   │   ├── FileCabinet/
 │   │   │   └── SuiteScripts/ai_voice_agent/
-│   │   │       ├── AVA_Suitelet.js           # Suitelet — UI + AJAX handler
-│   │   │       ├── AVA_RESTlet.js            # RESTlet — external API
-│   │   │       ├── AVA_ClientScript.js       # Client script — keyboard shortcuts
+│   │   │       ├── NAVA_Suitelet.js           # Suitelet — UI + AJAX handler
+│   │   │       ├── NAVA_RESTlet.js            # RESTlet — external API
+│   │   │       ├── NAVA_ClientScript.js       # Client script — keyboard shortcuts
 │   │   │       └── lib/
-│   │   │           ├── AVA_IntentResolver.js      # Hybrid LLM + rules intent engine
-│   │   │           ├── AVA_TranslationEngine.js   # 32-language translation
-│   │   │           ├── AVA_LLMOrchestrator.js     # Multi-turn agentic loop
-│   │   │           ├── AVA_ToolEngine.js          # LLM tool definitions & execution
-│   │   │           ├── AVA_ActionRouter.js        # Record CRUD operations
-│   │   │           └── AVA_AuditLog.js            # Custom record audit trail
+│   │   │           ├── NAVA_IntentResolver.js      # Hybrid LLM + rules intent engine
+│   │   │           ├── NAVA_TranslationEngine.js   # 32-language translation
+│   │   │           ├── NAVA_LLMOrchestrator.js     # Multi-turn agentic loop
+│   │   │           ├── NAVA_ToolEngine.js          # LLM tool definitions & execution
+│   │   │           ├── NAVA_ActionRouter.js        # Record CRUD operations
+│   │   │           └── NAVA_AuditLog.js            # Custom record audit trail
 │   │   ├── Objects/
-│   │   │   ├── customrecord_ava_audit_log.xml     # Audit log record type
-│   │   │   ├── customscript_ava_suitelet.xml      # Suitelet script definition
-│   │   │   ├── customscript_ava_restlet.xml       # RESTlet script definition
-│   │   │   └── customscript_ava_client.xml        # Client script definition
+│   │   │   ├── customrecord_nava_audit_log.xml     # Audit log record type
+│   │   │   ├── customscript_nava_suitelet.xml      # Suitelet script definition
+│   │   │   ├── customscript_nava_restlet.xml       # RESTlet script definition
+│   │   │   └── customscript_nava_client.xml        # Client script definition
 │   │   ├── manifest.xml
 │   │   └── deploy.xml
 │   ├── __tests__/
-│   │   ├── AVA_IntentResolver.test.js             # Intent resolution tests
-│   │   └── AVA_TranslationEngine.test.js          # Translation tests
+│   │   ├── NAVA_IntentResolver.test.js             # Intent resolution tests
+│   │   └── NAVA_TranslationEngine.test.js          # Translation tests
 │   ├── jest.config.js
 │   ├── package.json
 │   └── suitecloud.config.js
@@ -234,13 +234,13 @@ After deployment, the following scripts will be available in your NetSuite accou
 
 | Script | Type | Entry Point |
 |--------|------|-------------|
-| `customscript_ava_suitelet` | Suitelet | `AVA_Suitelet.js → onRequest` |
-| `customscript_ava_restlet` | RESTlet | `AVA_RESTlet.js → get / post` |
-| `customscript_ava_client` | Client Script | `AVA_ClientScript.js → pageInit` |
+| `customscript_nava_suitelet` | Suitelet | `NAVA_Suitelet.js → onRequest` |
+| `customscript_nava_restlet` | RESTlet | `NAVA_RESTlet.js → get / post` |
+| `customscript_nava_client` | Client Script | `NAVA_ClientScript.js → pageInit` |
 
 ### Custom Record
 
-The deployment creates a custom record type `customrecord_ava_audit_log` with fields for:
+The deployment creates a custom record type `customrecord_nava_audit_log` with fields for:
 - Event type, user ID, user name, role ID
 - Transcript, intent JSON, action result
 - Confidence score, governance used
@@ -250,7 +250,7 @@ The deployment creates a custom record type `customrecord_ava_audit_log` with fi
 
 Ensure the executing role has:
 - **SuiteScript** — Full permission
-- **Custom Records** — Create/Edit for `customrecord_ava_audit_log`
+- **Custom Records** — Create/Edit for `customrecord_nava_audit_log`
 - **Transactions** — Appropriate level for the record types users will interact with
 - **Lists / Records** — View access for entity and item lookups
 
@@ -261,7 +261,7 @@ Ensure the executing role has:
 ### Access the Voice Agent
 
 1. Navigate to the Suitelet URL in your NetSuite account
-2. You'll see the AVA chat interface
+2. You'll see the NAVA chat interface
 
 ### Voice Commands (examples)
 
@@ -290,8 +290,8 @@ Ensure the executing role has:
 ```javascript
 // POST to the RESTlet endpoint
 var response = https.requestRestlet({
-    scriptId: 'customscript_ava_restlet',
-    deploymentId: 'customdeploy_ava_restlet',
+    scriptId: 'customscript_nava_restlet',
+    deploymentId: 'customdeploy_nava_restlet',
     method: 'POST',
     body: JSON.stringify({
         action: 'process',
@@ -314,7 +314,7 @@ var response = https.requestRestlet({
 - [ ] **Webhook integrations** — trigger external workflows from voice commands
 - [ ] **Mobile companion app** — native iOS/Android wrapper using the RESTlet API
 - [ ] **Streaming responses** — real-time token streaming for long LLM answers
-- [ ] **Custom vocabulary training** — teach AVA company-specific terms and record names
+- [ ] **Custom vocabulary training** — teach NAVA company-specific terms and record names
 
 ---
 

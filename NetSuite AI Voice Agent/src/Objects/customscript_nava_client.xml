@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<clientscript scriptid="customscript_ava_client">
-  <name>AVA Voice Agent Client Script</name>
-  <scriptfile>[/SuiteScripts/ai_voice_agent/AVA_ClientScript.js]</scriptfile>
+<clientscript scriptid="customscript_nava_client">
+  <name>NAVA Voice Agent Client Script</name>
+  <scriptfile>[/SuiteScripts/ai_voice_agent/NAVA_ClientScript.js]</scriptfile>
   <description>Client script for the Voice Agent Suitelet — keyboard shortcuts and page initialization.</description>
   <isinactive>F</isinactive>
   <notifyadmins>F</notifyadmins>

@@ -4,14 +4,14 @@
  * @description LLM Orchestration Layer — manages multi-turn tool-augmented conversations with N/llm GPT-OSS
  */
 define(['N/llm', 'N/runtime',
-    './AVA_ToolEngine',
-    './AVA_AuditLog'],
+    './NAVA_ToolEngine',
+    './NAVA_AuditLog'],
 function (llm, runtime, toolEngine, auditLog) {
 
     var MAX_TOOL_ITERATIONS = 5;
 
     var SYSTEM_PROMPT =
-        'You are NetSuite AI Voice Agent (AVA), an enterprise assistant embedded inside NetSuite.\n' +
+        'You are NetSuite AI Voice Agent (NAVA), an enterprise assistant embedded inside NetSuite.\n' +
         'Your role is to help users interact with NetSuite using natural language.\n\n' +
         'RULES:\n' +
         '1. You have access to tools that can search records, get record details, count records, and check permissions.\n' +

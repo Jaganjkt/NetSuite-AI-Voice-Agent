@@ -40,7 +40,7 @@ function (record, search, url, runtime, log) {
                 default:       return executeSearch(recordType, params);
             }
         } catch (e) {
-            log.error('AVA_ActionRouter', action + ' on ' + recordType + ': ' + e.message);
+            log.error('NAVA_ActionRouter', action + ' on ' + recordType + ': ' + e.message);
             return { success: false, message: 'Error executing ' + action + ' on ' + recordType + ': ' + e.message };
         }
     }
@@ -357,7 +357,7 @@ function (record, search, url, runtime, log) {
                 }
             }
         } catch (e) {
-            log.debug('AVA_ActionRouter', 'Lookup failed for ' + recordType + ' ' + internalId + ': ' + e.message);
+            log.debug('NAVA_ActionRouter', 'Lookup failed for ' + recordType + ' ' + internalId + ': ' + e.message);
         }
 
         try {

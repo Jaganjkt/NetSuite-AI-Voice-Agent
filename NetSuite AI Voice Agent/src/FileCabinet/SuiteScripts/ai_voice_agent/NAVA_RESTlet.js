@@ -5,11 +5,11 @@
  * @description RESTlet endpoint for Voice Agent — enables mobile app and external integrations
  */
 define(['N/log', 'N/runtime',
-    './lib/AVA_IntentResolver',
-    './lib/AVA_TranslationEngine',
-    './lib/AVA_LLMOrchestrator',
-    './lib/AVA_ActionRouter',
-    './lib/AVA_AuditLog'],
+    './lib/NAVA_IntentResolver',
+    './lib/NAVA_TranslationEngine',
+    './lib/NAVA_LLMOrchestrator',
+    './lib/NAVA_ActionRouter',
+    './lib/NAVA_AuditLog'],
 function (log, runtime,
     intentResolver, translationEngine, llmOrchestrator, actionRouter, auditLog) {
 
@@ -42,7 +42,7 @@ function (log, runtime,
 
             return { success: false, message: 'Unknown action: ' + action };
         } catch (e) {
-            log.error('AVA_RESTlet', e.message);
+            log.error('NAVA_RESTlet', e.message);
             auditLog.logError({ action: action }, e.message, sessionId);
             return { success: false, error: e.message };
         }

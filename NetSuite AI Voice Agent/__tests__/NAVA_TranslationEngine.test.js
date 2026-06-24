@@ -1,5 +1,5 @@
 /**
- * Unit tests for AVA_TranslationEngine
+ * Unit tests for NAVA_TranslationEngine
  */
 
 jest.mock('N/machineTranslation', () => ({
@@ -14,11 +14,11 @@ jest.mock('N/log', () => ({
 
 const mt = require('N/machineTranslation');
 
-describe('AVA_TranslationEngine', () => {
+describe('NAVA_TranslationEngine', () => {
     let translationEngine;
 
     beforeAll(() => {
-        translationEngine = require('../src/FileCabinet/SuiteScripts/ai_voice_agent/lib/AVA_TranslationEngine');
+        translationEngine = require('../src/FileCabinet/SuiteScripts/ai_voice_agent/lib/NAVA_TranslationEngine');
     });
 
     beforeEach(() => {

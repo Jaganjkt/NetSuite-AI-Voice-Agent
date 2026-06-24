@@ -83,7 +83,7 @@ define(['N/machineTranslation', 'N/log'], function (mt, log) {
                 wasTranslated: true
             };
         } catch (e) {
-            log.audit('AVA_Translation', 'Translation skipped: ' + e.message);
+            log.audit('NAVA_Translation', 'Translation skipped: ' + e.message);
             return { text: text, sourceLanguage: 'en', wasTranslated: false };
         }
     }
@@ -107,7 +107,7 @@ define(['N/machineTranslation', 'N/log'], function (mt, log) {
                 wasTranslated: true
             };
         } catch (e) {
-            log.audit('AVA_Translation', 'Translation failed: ' + e.message);
+            log.audit('NAVA_Translation', 'Translation failed: ' + e.message);
             return { text: text, wasTranslated: false };
         }
     }
