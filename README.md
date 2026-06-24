@@ -8,11 +8,9 @@ Built entirely with **SuiteScript 2.1** and NetSuite's new generative-AI modules
 
 ## Demo
 
-<!-- Replace the path below with your uploaded video or a YouTube/Loom link -->
+https://github.com/Jaganjkt/NetSuite-AI-Voice-Agent/raw/master/NetSuite%20AI%20Voice%20Agent.mp4
 
-https://github.com/user-attachments/assets/placeholder
-
-> *Upload your demo video to the `demo/` folder or link it here after pushing to GitHub.*
+> *Click the link above or download the video to watch the full walkthrough of AVA in action inside NetSuite.*
 
 ---
 
