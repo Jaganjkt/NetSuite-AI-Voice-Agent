@@ -1,0 +1,16 @@
+<deploy>
+    <configuration>
+        <path>~/AccountConfiguration/*</path>
+    </configuration>
+    <files>
+        <path>~/FileCabinet/SuiteScripts/ai_voice_agent/*</path>
+        <path>~/FileCabinet/SuiteScripts/ai_voice_agent/lib/*</path>
+        <path>~/FileCabinet/SuiteScripts/ai_voice_agent/ui/*</path>
+    </files>
+    <objects>
+        <path>~/Objects/*</path>
+    </objects>
+    <translationimports>
+        <path>~/Translations/*</path>
+    </translationimports>
+</deploy>

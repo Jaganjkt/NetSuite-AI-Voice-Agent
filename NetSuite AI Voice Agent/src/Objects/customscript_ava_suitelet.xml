@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suitelet scriptid="customscript_ava_suitelet">
+  <name>AVA Voice Agent Suitelet</name>
+  <scriptfile>[/SuiteScripts/ai_voice_agent/AVA_Suitelet.js]</scriptfile>
+  <description>Main Suitelet serving the Voice Agent UI and processing voice commands.</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ava_suitelet">
+      <title>AVA Voice Agent</title>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <allroles>T</allroles>
+      <status>RELEASED</status>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

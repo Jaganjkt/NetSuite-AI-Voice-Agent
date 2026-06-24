@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restlet scriptid="customscript_ava_restlet">
+  <name>AVA Voice Agent RESTlet</name>
+  <scriptfile>[/SuiteScripts/ai_voice_agent/AVA_RESTlet.js]</scriptfile>
+  <description>RESTlet API for mobile and external voice agent integrations.</description>
+  <isinactive>F</isinactive>
+  <notifyadmins>F</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ava_restlet">
+      <title>AVA Voice Agent API</title>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <allroles>T</allroles>
+      <status>RELEASED</status>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

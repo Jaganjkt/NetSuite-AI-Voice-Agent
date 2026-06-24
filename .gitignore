@@ -1,0 +1,69 @@
+# ── Dependencies ──
+node_modules/
+package-lock.json
+
+# ── IDE / Editors ──
+.idea/
+.vscode/
+*.iml
+*.iws
+.project
+.classpath
+*.launch
+.settings/
+*.sublime-workspace
+
+# ── TypeScript cache ──
+*.tsbuildinfo
+
+# ── Logs ──
+logs/
+*.log
+npm-debug.log*
+
+# ── Build output ──
+build/
+dist/
+
+# ── SuiteCloud project config (account-specific) ──
+project.json
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ── npm pack output ──
+*.tgz
+
+# ── Sass cache ──
+.sass-cache/
+
+# ── Environment / secrets ──
+.env
+.env.*
+credentials.json
+
+# ── Claude Code local config ──
+.claude/
+
+# ── Exclude other project folders (not part of this repo) ──
+/NetSuiteAIAssistant/
+/NetSuiteAIAssistant-/
+/RocksoftAIAgent/
+/TrailBalance/
+/FileCabinetTool-20250817-01/
+/UploadCaptureCreate(UCC)/
+
+# ── Exclude root-level personal/training files ──
+/*.pdf
+/*.xls
+/*.xlsx
+/*.zip
+/*.webm
+/*.jpeg
+/*.png
+/*.xml
+/*.txt
+/*.js
